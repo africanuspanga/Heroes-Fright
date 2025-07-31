@@ -12,7 +12,7 @@ import {
   Factory,
   ShoppingCart,
   Wheat,
-  Pickaxe,
+  Hammer,
   HardHat,
   Pill,
 } from "lucide-react"
@@ -23,7 +23,13 @@ export default function HomePage() {
       {/* Hero Section */}
       <section className="relative h-screen flex items-center justify-center">
         <div className="absolute inset-0">
-          <Image src="/images/port-sunset.jpeg" alt="Port at sunset" fill className="object-cover" priority />
+          <Image
+            src="/images/hero-background.png"
+            alt="Container port at sunset"
+            fill
+            className="object-cover"
+            priority
+          />
           <div className="absolute inset-0 bg-black/50" />
         </div>
 
@@ -212,7 +218,7 @@ export default function HomePage() {
             <Card className="text-center hover:shadow-lg transition-shadow">
               <CardContent className="p-4">
                 <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-2">
-                  <Pickaxe className="h-6 w-6 text-blue-600" />
+                  <Hammer className="h-6 w-6 text-blue-600" />
                 </div>
                 <h3 className="font-semibold text-sm">Mining</h3>
               </CardContent>

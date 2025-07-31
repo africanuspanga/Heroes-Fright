@@ -1,0 +1,27 @@
+# Robots.txt for Heroes Freight Forwarder Ltd.
+# https://www.heroes.co.tz
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://www.heroes.co.tz/sitemap.xml
+
+# Disallow admin and private areas (if any in future)
+Disallow: /admin/
+Disallow: /private/
+Disallow: /_next/
+Disallow: /api/
+
+# Allow all major search engines
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+# Crawl delay (optional)
+Crawl-delay: 1

@@ -20,36 +20,38 @@ export default function Navigation() {
 
   return (
     <nav className="bg-white shadow-lg sticky top-0 z-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
-          <Link href="/" className="flex items-center">
+      <div className="w-full mx-auto px-4 sm:px-8 lg:px-16">
+        <div className="flex justify-between items-center h-20 sm:h-24">
+          {/* LARGE Logo Section - Fill The Whole Space */}
+          <Link href="/" className="flex items-center py-2 sm:py-3">
             <Image
-              src="/images/logo.png"
+              src="/images/logo-nav-large.png"
               alt="Heroes Freight Forwarder Ltd."
-              width={200}
-              height={60}
-              className="h-12 w-auto"
+              width={450}
+              height={135}
+              className="h-16 sm:h-20 w-auto object-contain"
+              priority
             />
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden lg:flex items-center space-x-6 xl:space-x-8">
             {navItems.map((item) => (
               <Link
                 key={item.href}
                 href={item.href}
-                className="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors"
+                className="text-gray-700 hover:text-blue-600 px-2 xl:px-3 py-2 text-sm font-medium transition-colors whitespace-nowrap"
               >
                 {item.label}
               </Link>
             ))}
             <Link href="/contact">
-              <Button className="bg-blue-600 hover:bg-blue-700">Get Quote</Button>
+              <Button className="bg-blue-600 hover:bg-blue-700 text-sm px-4 py-2">Get Quote</Button>
             </Link>
           </div>
 
           {/* Mobile menu button */}
-          <div className="md:hidden">
+          <div className="lg:hidden">
             <Button variant="ghost" size="sm" onClick={() => setIsOpen(!isOpen)}>
               {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
             </Button>
@@ -58,7 +60,7 @@ export default function Navigation() {
 
         {/* Mobile Navigation */}
         {isOpen && (
-          <div className="md:hidden">
+          <div className="lg:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t shadow-lg">
               {navItems.map((item) => (
                 <Link

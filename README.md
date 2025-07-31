@@ -1,30 +1,112 @@
-# Heroes freight website
+# Heroes Freight Forwarder Website
 
-*Automatically synced with your [v0.dev](https://v0.dev) deployments*
+A modern, responsive website for Heroes Freight Forwarder Ltd., built with Next.js and configured for static export.
 
-[![Deployed on Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-black?style=for-the-badge&logo=vercel)](https://vercel.com/africanus-s-projects/v0-heroes-freight-website)
-[![Built with v0](https://img.shields.io/badge/Built%20with-v0.dev-black?style=for-the-badge)](https://v0.dev/chat/projects/7JDw84KzeU4)
+## Features
 
-## Overview
+- **Static Export Ready**: Configured for deployment on cPanel and other static hosting providers
+- **Fully Responsive**: Optimized for all device sizes
+- **Modern Design**: Professional logistics company website
+- **SEO Optimized**: Meta tags and structured content
+- **Fast Loading**: Optimized images and performance
 
-This repository will stay in sync with your deployed chats on [v0.dev](https://v0.dev).
-Any changes you make to your deployed app will be automatically pushed to this repository from [v0.dev](https://v0.dev).
+## Getting Started
 
-## Deployment
+### Development
 
-Your project is live at:
+\`\`\`bash
+npm install
+npm run dev
+\`\`\`
 
-**[https://vercel.com/africanus-s-projects/v0-heroes-freight-website](https://vercel.com/africanus-s-projects/v0-heroes-freight-website)**
+### Building for Production
 
-## Build your app
+\`\`\`bash
+npm run build
+\`\`\`
 
-Continue building your app on:
+### Static Export for cPanel
 
-**[https://v0.dev/chat/projects/7JDw84KzeU4](https://v0.dev/chat/projects/7JDw84KzeU4)**
+\`\`\`bash
+npm run export
+\`\`\`
 
-## How It Works
+This will create an `out` folder with all static files ready for upload to cPanel.
 
-1. Create and modify your project using [v0.dev](https://v0.dev)
-2. Deploy your chats from the v0 interface
-3. Changes are automatically pushed to this repository
-4. Vercel deploys the latest version from this repository
+## Deployment to cPanel
+
+1. Run `npm run export`
+2. Upload all files from the `out` folder to your cPanel public_html directory
+3. Ensure your domain points to the uploaded files
+
+## Configuration
+
+The site is configured for static export with:
+- `output: 'export'` in next.config.mjs
+- `trailingSlash: true` for better server compatibility
+- `images: { unoptimized: true }` for static hosting
+- Client-side form handling for contact page
+
+## Contact Form
+
+The contact form is configured for client-side handling. For production use, integrate with:
+- Formspree
+- EmailJS
+- Netlify Forms
+- Or your preferred form handling service
+
+## Pages
+
+- **Home**: Hero section with services overview
+- **About Us**: Company information and values
+- **Services**: Detailed service offerings
+- **Industries**: Industries served
+- **Why Choose Us**: Company advantages
+- **Contact**: Contact information and form
+
+## Technologies Used
+
+- Next.js 14
+- React 18
+- TypeScript
+- Tailwind CSS
+- Lucide React Icons
+- Shadcn/ui Components
+\`\`\`
+
+```plaintext file=".gitignore"
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+/node_modules
+/.pnp
+.pnp.js
+
+# testing
+/coverage
+
+# next.js
+/.next/
+/out/
+
+# production
+/build
+
+# misc
+.DS_Store
+*.pem
+
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# local env files
+.env*.local
+
+# vercel
+.vercel
+
+# typescript
+*.tsbuildinfo
+next-env.d.ts
