@@ -26,7 +26,7 @@ export default function Navigation() {
           <Link href="/" className="flex items-center py-2 sm:py-3">
             <Image
               src="/images/logo-nav-large.png"
-              alt="Heroes Freight Forwarder Ltd."
+              alt="Heroes Freight Forwarders Ltd."
               width={450}
               height={135}
               className="h-16 sm:h-20 w-auto object-contain"

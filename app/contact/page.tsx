@@ -33,15 +33,43 @@ export default function ContactPage() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setIsSubmitting(true)
-
-    // Simulate form submission for static site
-    // In a real implementation, you would send this to a contact form service
-    // like Formspree, Netlify Forms, or EmailJS
+    setSubmitMessage("")
 
     try {
-      // Simulate API call delay
-      await new Promise((resolve) => setTimeout(resolve, 1000))
+      // Google Apps Script Web App URL
+      const GOOGLE_SCRIPT_URL =
+        "https://script.google.com/macros/s/AKfycbz6pJyMLh90IYQp_NpMRVPYrzX4qOKo1mYOjsdI3rWJW7R_BpYRiGBqNwk9SasuacFirw/exec"
 
+      // Prepare data for Google Sheets
+      const submitData = {
+        timestamp: new Date().toISOString(),
+        firstName: formData.firstName,
+        lastName: formData.lastName,
+        email: formData.email,
+        phone: formData.phone || "Not provided",
+        company: formData.company || "Not provided",
+        service: formData.service || "Not specified",
+        message: formData.message,
+      }
+
+      // Set a timeout to show success message quickly
+      const timeoutPromise = new Promise((resolve) => {
+        setTimeout(() => resolve("timeout"), 3000) // 3 second timeout
+      })
+
+      const fetchPromise = fetch(GOOGLE_SCRIPT_URL, {
+        method: "POST",
+        mode: "no-cors", // Required for Google Apps Script
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(submitData),
+      })
+
+      // Race between fetch and timeout
+      await Promise.race([fetchPromise, timeoutPromise])
+
+      // Show success message regardless of which promise resolves first
       setSubmitMessage("Thank you for your message! We will get back to you soon.")
       setFormData({
         firstName: "",
@@ -53,7 +81,8 @@ export default function ContactPage() {
         message: "",
       })
     } catch (error) {
-      setSubmitMessage("There was an error sending your message. Please try again.")
+      console.error("Error submitting form:", error)
+      setSubmitMessage("There was an error sending your message. Please try again or contact us directly.")
     } finally {
       setIsSubmitting(false)
     }
@@ -66,7 +95,7 @@ export default function ContactPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center text-white">
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6">
-              Get in Touch with Heroes Freight Forwarder Ltd.
+              Get in Touch with Heroes Freight Forwarders Ltd.
             </h1>
             <p className="text-lg sm:text-xl max-w-3xl mx-auto">
               Ready to streamline your logistics and empower your business? Contact us today to discuss your specific
@@ -95,7 +124,7 @@ export default function ContactPage() {
                       <div>
                         <h3 className="text-lg sm:text-xl font-semibold mb-2">Visit Us</h3>
                         <div className="text-gray-600 text-sm sm:text-base">
-                          <p className="font-medium">Heroes Freight Forwarder Ltd.</p>
+                          <p className="font-medium">Heroes Freight Forwarders Ltd.</p>
                           <p>Feykatt Tower, 8th Floor</p>
                           <p>Morocco, Ali Hassan Mwinyi Rd</p>
                           <p>Dar es Salaam, Tanzania</p>

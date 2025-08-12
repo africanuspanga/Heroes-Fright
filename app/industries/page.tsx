@@ -26,7 +26,7 @@ export default function IndustriesPage() {
               Specialized Solutions for Every Industry
             </h2>
             <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto">
-              Heroes Freight Forwarder Ltd. is proud to be the logistics partner for industry-leading brands across
+              Heroes Freight Forwarders Ltd. is proud to be the logistics partner for industry-leading brands across
               diverse sectors
             </p>
           </div>

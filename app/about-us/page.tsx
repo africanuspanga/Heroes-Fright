@@ -10,7 +10,7 @@ export default function AboutUsPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center text-white">
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6">
-              About Heroes Freight Forwarder Ltd.
+              About Heroes Freight Forwarders Ltd.
             </h1>
             <p className="text-lg sm:text-xl max-w-3xl mx-auto">
               Your Reliable Logistics Partner in Tanzania and Beyond
@@ -27,7 +27,7 @@ export default function AboutUsPage() {
               <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4 sm:mb-6">Who We Are</h2>
               <div className="space-y-4 text-gray-600 text-base sm:text-lg">
                 <p>
-                  At Heroes Freight Forwarder Ltd., we pride ourselves on being a leading logistics and freight
+                  At Heroes Freight Forwarders Ltd., we pride ourselves on being a leading logistics and freight
                   forwarding company dedicated to providing exceptional service across Tanzania and beyond. Located in
                   the bustling heart of Dar es Salaam, at the Feykatt Tower on Ali Hassan Mwinyi Rd, we are
                   strategically positioned to serve your global and local logistics needs.

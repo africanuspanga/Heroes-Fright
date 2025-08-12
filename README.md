@@ -1,6 +1,6 @@
-# Heroes Freight Forwarder Website
+# Heroes Freight Forwarders Website
 
-A modern, responsive website for Heroes Freight Forwarder Ltd., built with Next.js and configured for static export.
+A modern, responsive website for Heroes Freight Forwarders Ltd., built with Next.js and configured for static export.
 
 ## Features
 
@@ -72,41 +72,3 @@ The contact form is configured for client-side handling. For production use, int
 - Tailwind CSS
 - Lucide React Icons
 - Shadcn/ui Components
-\`\`\`
-
-```plaintext file=".gitignore"
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
-
-# dependencies
-/node_modules
-/.pnp
-.pnp.js
-
-# testing
-/coverage
-
-# next.js
-/.next/
-/out/
-
-# production
-/build
-
-# misc
-.DS_Store
-*.pem
-
-# debug
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-
-# local env files
-.env*.local
-
-# vercel
-.vercel
-
-# typescript
-*.tsbuildinfo
-next-env.d.ts

@@ -11,7 +11,7 @@ export default function Footer() {
           <div className="col-span-1 md:col-span-2">
             <Image
               src="/images/logo-footer-hq.png"
-              alt="Heroes Freight Forwarder Ltd."
+              alt="Heroes Freight Forwarders Ltd."
               width={200}
               height={60}
               className="h-12 w-auto mb-3"
@@ -85,7 +85,7 @@ export default function Footer() {
 
         <div className="border-t border-gray-600 mt-6 pt-4 text-center">
           <p className="text-gray-400 text-xs">
-            © {new Date().getFullYear()} Heroes Freight Forwarder Ltd. All rights reserved.
+            © {new Date().getFullYear()} Heroes Freight Forwarders Ltd. All rights reserved.
           </p>
         </div>
       </div>

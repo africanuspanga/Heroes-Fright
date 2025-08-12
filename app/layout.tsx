@@ -8,7 +8,7 @@ import Footer from "@/components/footer"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "Heroes Freight Forwarder Ltd. - Your Trusted Logistics Partner in Tanzania",
+  title: "Heroes Freight Forwarders Ltd. - Your Trusted Logistics Partner in Tanzania",
   description:
     "Leading freight forwarding, customs clearance, and supply chain management services across East Africa and beyond. Your Cargo, Our Mission.",
   keywords: "freight forwarding, logistics, customs clearance, supply chain, Tanzania, Dar es Salaam, shipping, cargo",

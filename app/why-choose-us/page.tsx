@@ -11,7 +11,7 @@ export default function WhyChooseUsPage() {
       <section className="relative py-20 bg-gradient-to-r from-blue-600 to-blue-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center text-white">
-            <h1 className="text-5xl font-bold mb-6">Why Partner with Heroes Freight Forwarder?</h1>
+            <h1 className="text-5xl font-bold mb-6">Why Partner with Heroes Freight Forwarders?</h1>
             <p className="text-xl max-w-3xl mx-auto">
               Choosing the right logistics partner is crucial for your business's success. Discover the distinct
               advantages that set us apart.
@@ -228,7 +228,7 @@ export default function WhyChooseUsPage() {
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <h2 className="text-4xl font-bold text-white mb-6">Experience the Heroes Difference</h2>
           <p className="text-xl text-blue-100 mb-8">
-            Join the industry leaders who trust Heroes Freight Forwarder for their logistics needs
+            Join the industry leaders who trust Heroes Freight Forwarders for their logistics needs
           </p>
           <div className="flex justify-center">
             <Link href="/contact">
